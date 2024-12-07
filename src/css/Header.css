@@ -1,0 +1,44 @@
+/* Header.css */
+header {
+    transition: background-color 0.3s;
+}
+
+
+/* Move up two texts (20px = font-size) */
+.link-container:hover {
+    transition: transform 0.4s ease;
+}
+
+/* Rotate menuButton slightly on hover */
+.menuButton:hover {
+    background-color: 'white'; 
+    background-image: 'url("/menu2.png")';
+    color: 'black';
+    transition: transform 0.4s ease;
+}
+
+/* Reset rotation for menuButton1 on hover */
+/* .menuButton1:hover {
+    transform: rotate(0);
+    transition: transform 0.4s ease;
+} */
+
+/* Rotate hireButton slightly on hover */
+.hireButton:hover {
+    transform: rotate(20deg);
+    transition: transform 0.4s ease;
+}
+
+/* Reset rotation for hireButton1 on hover */
+.hireButton1:hover {
+    transform: rotate(0);
+    transition: transform 0.4s ease;
+}
+
+nav a:hover {
+    color: #007BFF; /* Adjust the hover color */
+}
+
+.socialLink:hover {
+    color: #007BFF; /* Adjust the social media link hover color */
+}

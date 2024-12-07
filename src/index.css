@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rock+Salt&display=swap'); */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.fixed {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10; /* Ensure background doesn't interfere with UI */
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+
+
+.font-rocksalt{
+  font-family: "Rock Salt";
+}
+
+
+
+button.animate-btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: black;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0; /* Ensure the button text is above the animation */
+  transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+button.animate-btn::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1; /* Place the animation background behind the text */
+  transition: transform 0.3s ease; /* Smooth transition for the animation */
+  transform: translateY(0);
+}
+
+button.animate-btn:hover {
+  color: white; /* Change text color on hover */
+}
+
+button.animate-btn:hover::before {
+  transform: translateY(-100%); /* Move the animation background into view */
+}
+
+button.animate-btn:not(:hover)::before {
+  transform: translateY(100%); /* Move the animation background out of view */
+}
+
+
+
+
+button.hire-btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0; /* Ensure the button text is above the animation */
+  transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+button.hire-btn::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: -1; /* Place the animation background behind the text */
+  transition: transform 0.3s ease; /* Smooth transition for the animation */
+  transform: translateY(0);
+}
+
+button.hire-btn:hover {
+  color: black; /* Change text color on hover */
+}
+
+button.hire-btn:hover::before {
+  transform: translateY(-100%); /* Move the animation background into view */
+}
+
+button.hire-btn:not(:hover)::before {
+  transform: translateY(100%); /* Move the animation background out of view */
+}
+
+
+
+
+
+
+
+
+button.upload-btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #fe6f61;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0; /* Ensure the button text is above the animation */
+  transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+button.upload-btn::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1; /* Place the animation background behind the text */
+  transition: transform 0.3s ease; /* Smooth transition for the animation */
+  transform: translateY(0);
+}
+
+button.upload-btn:hover {
+  color: white; /* Change text color on hover */
+}
+
+button.upload-btn:hover::before {
+  transform: translateY(-100%); /* Move the animation background into view */
+}
+
+button.upload-btn:not(:hover)::before {
+  transform: translateY(100%); /* Move the animation background out of view */
+}
+
+
+
+
+.upload-btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #fe6f61;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0; /* Ensure the button text is above the animation */
+  transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.upload-btn::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1; /* Place the animation background behind the text */
+  transition: transform 0.3s ease; /* Smooth transition for the animation */
+  transform: translateY(0);
+}
+
+.upload-btn:hover {
+  color: white; /* Change text color on hover */
+}
+
+.upload-btn:hover::before {
+  transform: translateY(-100%); /* Move the animation background into view */
+}
+
+.upload-btn:not(:hover)::before {
+  transform: translateY(100%); /* Move the animation background out of view */
+}
+
