@@ -25,7 +25,7 @@ export default function Background() {
         <directionalLight position={[10, 10, 10]} intensity={1} />
 
         {/* 3D Model */}
-        {/* <Landscape /> */}
+        <Landscape />
 
         {/* Debugging Helpers */}
         <gridHelper args={[100, 100]} />
