@@ -428,11 +428,11 @@ const HomePage = () => {
             </motion.div>
           </section>
 
-          <section className='w-screen h-screen'></section>
         </HorizontalScroll>
+      <FloatingChatButton />
       </main>
       <Footer />
-      <FloatingChatButton />
+      <button className='z-10 animate-btn'>adfa</button>
     </ErrorBoundary>
   );
 };
