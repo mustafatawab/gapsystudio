@@ -139,21 +139,21 @@ const Services = () => {
   return (
     <div>
       <section className="hero-container">
-        <div className="hero-content">
+        <div className="lg:w-2/3 mx-auto space-y-6">
           <div className="flex items-center justify-between flex-wrap lg:flex-nowrap flex-col md:flex-row">
-            <div className="hero-content3">
+            <div className="hero-content3 hidden lg:flex items-center">
               <img alt="Breadcrumbs" aria-hidden="true" loading="lazy" width="24s" height="24" decoding="async" data-nimg="1" class="styles_label__fRSpJ" src="/breadcrumbs.svg" />
               <h2 className="subheading">Gapsy / Services</h2>
             </div>
-            <p className="description font-rockSalt" >
+            <p className="lg:w-1/2 font-rockSalt" >
               Bring your dream project to life with one of our 8 comprehensive services!
             </p>
           </div>
-          <h1 className=" font-pp-formula-condensed text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-light" >Design Studio that Brings Creativity to Life!</h1>
+          <h1 className=" font-pp-formula-condensed text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-light" >Design Studio that Brings Creativity to Life!</h1>
           <div className="divider"></div> {/* Divider line */}
-          <div className="flex justify-between md:flex-row flex-col items-center gap-4">
+          <div className="flex justify-between lg:flex-row flex-col items-center gap-4">
             <button className="hire-us-button">Hire us</button>
-            <p className="description2 font-neue-montreal">
+            <p className="lg:w-1/2 font-neue-montreal">
               Gapsy is a digital agency specializing in mobile and web design and development, branding and animation.Gapsy is a digital agency specializing in mobile and web design and development, branding and animation.
             </p>
           </div>
@@ -195,7 +195,7 @@ const Services = () => {
         </Swiper>
       </div>
         
-      <div className="container">
+      <div className="lg:w-2/3 mx-auto px-5 lg:px-0">
         <h1 className="header font-pp-formula-condensed font-extralight text-4xl sm:text-5xl md:text-7xl lg:text-8xl">We work with the most progressive companies from all over the world.</h1>
         <div className="divider"></div> {/* Divider line */}
         <div className="">
@@ -231,7 +231,7 @@ const Services = () => {
           />
         </div>
       </div>
-      <div className="app-container">
+      <div className="lg:w-2/3 mx-auto px-5 ">
         <h1 className="header font-pp-formula-condensed font-extralight text-4xl sm:text-5xl md:text-7xl lg:text-8xl">Do you have any questions? We tried to answer most of them!</h1>
         <div className="faq-list">
           {faqs.map((faq, index) => (

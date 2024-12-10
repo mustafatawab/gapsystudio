@@ -130,21 +130,21 @@ const Industries = () => {
     <main>
       <section className="hero-container">
         <div className="">
-          <div className="flex flex-wrap justify-between items-center px-10 md:px-0 md:w-1/2 mx-auto">
-            <div className="hero-content3">
+          <div className="flex flex-wrap justify-between items-center px-10 md:px-0 lg:w-2/3 mx-auto">
+            <div className="hero-content3 lg:flex hidden">
               <img alt="Breadcrumbs" aria-hidden="true" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" className="styles_label__fRSpJ" src="/breadcrumbs.svg" />
               <h2 className="subheading"> <a href="/" className='hover:underline duration-500'> Gapsy </a> / Industries</h2>
             </div>
-            <p className="md:w-1/2 font-rockSalt text-black ">
+            <p className="lg:w-1/2 mx-auto font-rockSalt text-black ">
               Helping Industries Grow, Succeed and Thrive
             </p>
           </div>
           <h1 className="main-heading font-pp-formula-condensed text-4xl sm:text-5xl md:text-7xl lg:text-9xl  md:w-2/3 px-10 sm:px-20  mx-auto">Our Industries Strives To Be The Best In The Niche</h1>
-          <div className="divider md:w-2/3 mx-auto"></div> {/* Divider line */}
+          <div className="divider lg:w-2/3 mx-auto"></div> {/* Divider line */}
 
           <div className=" flex flex-wrap items-center md:w-1/2 mx-auto justify-between gap-6 px-10 md:px-0">
             <button className="hire-btn">Tell Us About Your Project</button>
-            <p className="sm:w-1/2 font-neue-montreal">
+            <p className="lg:w-1/2 font-neue-montreal">
               Gapsy is a forward-thinking design studio that specializes in creating next-generation designs. We believe in pushing the boundaries of what's possible and strive to create products and experiences that are truly unique. Whether designing a new type of user interface or developing a groundbreaking new product, we're always looking for ways to innovate. If you're looking for a design studio that thinks outside the box, Gapsy is the right choice. We'll help you create something truly special to make a lasting impression. Let's get started!
             </p>
           </div>
@@ -189,7 +189,7 @@ const Industries = () => {
             >
            
               <SwiperSlide>
-                  <img src='/images/adseller-1.webp' className="hover:scale-110 duration-500 w-[600px] h-[350px]" />
+                  <img src='/images/adseller-1.webp' className="hover:scale-110 duration-500 w-[600px] h-[350px] object-contain" />
               </SwiperSlide>
               <SwiperSlide>
                 <img src='/images/rkde.webp' className="hover:scale-110 duration-500 w-[600px] h-[350px]"/>
@@ -219,7 +219,7 @@ const Industries = () => {
 
 const Experience = ({ heading, videoUrl, subHeading, description, imageUrl, points }) => {
   return (
-    <section className="px-10 md:px-0">
+    <section className="px-5 md:px-0">
       <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-extralight font-pp-formula-condensed py-6">{heading}</h2>
       <div className="flex flex-wrap lg:flex-nowrap flex-col xl:flex-row items-center gap-5">
 
@@ -228,7 +228,7 @@ const Experience = ({ heading, videoUrl, subHeading, description, imageUrl, poin
             </video> }
 
 
-          {imageUrl &&  <img src={imageUrl} className="rounded-xl md:w-1/2 md:h-[500px] object-cover  hover:rotate-6 duration-300" />}
+          {imageUrl &&  <img src={imageUrl} className="rounded-xl md:2/3 lg:w-1/2 lg:h-[500px] object-cover  hover:rotate-6 duration-300" />}
 
 
 

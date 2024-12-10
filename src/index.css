@@ -217,3 +217,32 @@ button.upload-btn:not(:hover)::before {
   transform: translateY(100%); /* Move the animation background out of view */
 }
 
+
+
+
+.star-rating {
+  display: flex;
+  gap: 8px;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px 0px;
+}
+
+.star {
+  color: #ccc; /* Default gray color for unselected stars */
+  transition: color 0.2s ease;
+  padding: 0px 5px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.star.active {
+  color: white;
+  border-color: white; 
+}
+
+.star:hover {
+  color: white;
+  border-color: white; 
+
+}

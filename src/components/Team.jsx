@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import FAQItem from './FAQItem';
 import ContactForm from './ContactForm';
 import Testimonials from './Testimonials';
 import '../css/Services.css';
@@ -79,40 +80,6 @@ const faqs = [
     answer: "Our goals include expanding our client base, enhancing our service offerings, and continuing to improve our skills and knowledge to provide the best possible service to our clients."
   },
 ];
-
-function FAQItem({ question, answer }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [height, setHeight] = useState(0);
-  const answerRef = useRef(null);
-
-  const toggleOpen = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    setHeight(isOpen ? answerRef.current.scrollHeight : 0);
-  }, [isOpen]);
-
-  return (
-    <div className="faq-item">
-      <div className="faq-question" onClick={toggleOpen}>
-        <h3>{question}</h3>
-        <span className="icon">{isOpen ? '−' : '+'}</span>
-      </div>
-      <div
-        ref={answerRef}
-        className="faq-answer"
-        style={{
-          height: `${height}px`,
-          opacity: isOpen ? 1 : 0,
-          transition: 'height 0.3s ease, opacity 0.3s ease',
-        }}
-      >
-        <p>{answer}</p>
-      </div>
-    </div>
-  );
-}
 
 const BenefitCard = ({ icon, title, text }) => {
   return (
@@ -202,11 +169,11 @@ const About = () => {
       <section className="hero-container">
         <div className="">
           <div className="flex flex-wrap justify-between items-center px-10 md:px-0 md:w-2/4 mx-auto">
-            <div className="hero-content3">
+            <div className="hero-content3 hidden lg:flex">
               <img alt="Breadcrumbs" aria-hidden="true" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" className="styles_label__fRSpJ" src="/breadcrumbs.svg" />
               <h2 className="subheading"> <a href="/" className='hover:underline duration-500'> Gapsy </a> / About</h2>
             </div>
-            <p className="sm:w-1/2 font-rockSalt text-black ">
+            <p className="lg:w-1/2 font-rockSalt text-black ">
               Any project in mind? Drop us a line.
             </p>
           </div>
@@ -225,24 +192,17 @@ const About = () => {
           </div>
         </div>
       </section>
-      <div className="md:w-2/3 mx-auto px-10 md:px-0">
+      <div className="lg:w-2/3 mx-auto px-10 lg:px-0">
         <p >
-          Gapsy web design Studio is a professional web design company that has been in business since 2014.
-          We have a team of highly skilled and experienced web designers who are able to create custom websites
-          that are both visually appealing and user-friendly. We take pride in our work, and we are confident
-          that we can provide our clients with the best possible service. Some of the benefits of working with
-          Gapsy web design Studio include:Doing what we love most (using creative designs to solve your customer's problems,
-          creating an enjoyable and memorable experience, and quickly growing your business) makes us fulfilled.
-          We're constantly innovating and updated with the latest industry trends so that you will always get the best of the best products.
-          Interestingly, our talented and versatile designers are the driving force behind several highly-successful brands.
-          When you work with us, we can help you become one of them.
+        Doing what we love most (using creative designs to solve your customer's problems, creating an enjoyable and memorable experience, and quickly growing your business) makes us fulfilled. We’re constantly innovating and updated with the latest industry trends so that you will always get the best of the best products. Interestingly, our talented and versatile designers are the driving force behind several highly-successful brands. When you work with us, we can help you become one of them.
+
         </p>
         <img src={'/team.webp'} alt={"Team"} className="team-image" />
         <h1 className="header font-pp-formula-condensed text-4xl sm:text-5xl md:text-7xl lg:text-8xl">Gapsy always ready to start to take risks. Here, risk-taking is not only welcomed but encouraged.</h1>
         <div className="hero-content2">
           
-          <p className="md:w-1/2 ml-auto ">
-            Because we’re independent, we do things our way. United by way of some corporate overlord,
+          <p className="lg:w-1/2 ml-auto ">
+            Because we're independent, we do things our way. United by way of some corporate overlord,
             we can experiment with new processes and techniques to create pure, original, and exciting solutions.
             Those who work here come from different areas of expertise. One of us was a full-time professional burlesque dancer.
           </p>
@@ -307,12 +267,12 @@ const About = () => {
 
       </section>
 
-      <div className="container">
+      <div className="lg:w-2/3 px-5 mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl">We work with the most progressive companies from all over the world.</h1>
         <div className="divider"></div> {/* Divider line */}
         <div className="hero-content2">
           <p />
-          <p className="md:w-1/2 ml-auto">
+          <p className="lg:w-1/2 lg:ml-auto">
             Gapsy web design Studio is a professional web design company that has been in business since 2014.
             We have a team of highly skilled and experienced web designers who are able to create custom websites
             that are both visually appealing and user-friendly. We take pride in our work, and we are confident
@@ -343,7 +303,7 @@ const About = () => {
           />
         </div>
       </div>
-      <div className="app-container">
+      <div className="lg:w-2/3 px-5 mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl">Do you have any questions? We tried to answer most of them!</h1>
         <div className="faq-list">
           {faqs.map((faq, index) => (

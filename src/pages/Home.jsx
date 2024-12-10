@@ -9,6 +9,7 @@ import Header from '../components/Header';
 import { motion } from 'framer-motion';
 import { IoIosArrowForward } from "react-icons/io";
 import { ImAttachment } from "react-icons/im";
+import FloatingChatButton from '../components/FloatingChatButton';
 
 
 const HomePage = () => {
@@ -95,7 +96,7 @@ const HomePage = () => {
                 transition={{ duration: 1 }}
                 className=""
               >
-                <video autoplay loop>
+                <video autoPlay loop controls>
                   <source src='/videos/showreel.mp4' />
                 </video>
               </motion.div>
@@ -431,6 +432,7 @@ const HomePage = () => {
         </HorizontalScroll>
       </main>
       <Footer />
+      <FloatingChatButton />
     </ErrorBoundary>
   );
 };

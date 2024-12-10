@@ -102,7 +102,7 @@ const Blogs = () => {
                 </div>
 
                 {/* Blogs */}
-                <div className="w-2/3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="md:w-2/3 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
                     {currentBlogs.map((item) => {
                         const slug = generateSlug(item.title);
                         return (
